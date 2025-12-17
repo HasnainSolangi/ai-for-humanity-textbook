@@ -36,8 +36,6 @@ nul
 build_log.txt
 
 # Editor & Python Environments
-/.claude/
 /.clinerules
-/.specify/
 /.venv/
 __pycache__/
