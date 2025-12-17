@@ -10,8 +10,23 @@ const ChatWidget = () => {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedContext, setSelectedContext] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
+
+  // Listen for text selection changes
+  useEffect(() => {
+    const handleSelectionChange = () => {
+      const selection = window.getSelection();
+      const text = selection ? selection.toString().trim() : '';
+      if (text.length > 0) {
+        setSelectedContext(text);
+      }
+    };
+
+    document.addEventListener('selectionchange', handleSelectionChange);
+    return () => document.removeEventListener('selectionchange', handleSelectionChange);
+  }, []);
 
   const scrollToBottom = () => {
     if (messagesEndRef.current) {
@@ -66,7 +81,10 @@ const ChatWidget = () => {
       const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: userMsg }),
+        body: JSON.stringify({
+          question: userMsg,
+          selectedText: selectedContext
+        }),
         signal: controller.signal
       });
 
@@ -141,7 +159,20 @@ const ChatWidget = () => {
             )}
           </div>
 
-          <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-4 bg-slate-50 dark:bg-slate-900">
+          <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 bg-slate-50 dark:bg-slate-900">
+            {selectedContext && (
+              <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-800 p-3 rounded-xl animate-fadeIn relative mb-2">
+                <div className="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider mb-1 px-1">Selected Text Context</div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 italic line-clamp-3">"{selectedContext}"</div>
+                <button
+                  onClick={() => setSelectedContext('')}
+                  className="absolute top-2 right-2 text-amber-500 hover:text-amber-700 bg-transparent border-0 cursor-pointer p-0"
+                  title="Clear context"
+                >
+                  <X size={14} />
+                </button>
+              </div>
+            )}
             {messages.map((msg, idx) => (
               <div
                 key={idx}

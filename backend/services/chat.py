@@ -66,11 +66,11 @@ BEHAVIOR RULES:
    - Return a DIRECT markdown link: `[Open Chapter title](url)`.
    - Distinguish between Parts, Chapters, and Lessons based on the titles in the index.
 3. **Content**: Answer questions strictly from the "AI for Humanity" dataset (Context) or the Index.
-4. **Context vs Index**:
-   - Use **Index** for: "How many chapters?", "List the parts", "Open Chapter 1".
-   - Use **Context** for: "Summarize Chapter 1", "What is AI?", "Explain ethics".
-   
+4. **Selected Text Priority**: If text is provided in the "SELECTED TEXT" field below, prioritize answering based on that specific context.
 5. **No Hallucinations**: If it's not in the Index or Context, say "Information not available."
+
+SELECTED TEXT: 
+{selected_text}
 
 CONTEXT FROM VECTOR QUERY:
 {context}
@@ -102,8 +102,13 @@ YOUR RESPONSE:
             formatted_docs.append(f"Source File: {source_file}\nLink: {url}\nContent: {doc.page_content}")
         return "\n\n".join(formatted_docs)
 
+    from operator import itemgetter
     rag_chain = (
-        {"context": retriever | format_docs, "question": RunnablePassthrough()}
+        {
+            "context": itemgetter("question") | retriever | format_docs, 
+            "question": itemgetter("question"),
+            "selected_text": itemgetter("selected_text")
+        }
         | prompt
         | llm
         | StrOutputParser()
@@ -111,7 +116,7 @@ YOUR RESPONSE:
     
     return rag_chain
 
-async def ask_question(question: str):
+async def ask_question(question: str, selected_text: str = None):
     # Greeting Bypass: Check for greetings and return polite static response immediately
     # Only if the message is short (likely just a greeting) to avoid blocking actual questions like "Hi, what is AI?"
     import re
@@ -132,7 +137,10 @@ async def ask_question(question: str):
 
     try:
         chain = get_rag_chain()
-        response = chain.invoke(question)
+        response = chain.invoke({
+            "question": question,
+            "selected_text": selected_text if selected_text else "[No text selected by user]"
+        })
         return response
     except Exception as e:
         print(f"ERROR in RAG chain: {str(e)}")

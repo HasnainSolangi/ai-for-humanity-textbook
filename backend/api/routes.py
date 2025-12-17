@@ -5,6 +5,7 @@ from services.chat import ask_question
 
 class ChatRequest(BaseModel):
     question: str
+    selectedText: str = None
 
 router = APIRouter()
 
@@ -22,7 +23,7 @@ async def chat_endpoint(request: ChatRequest):
     RAG Chat endpoint.
     """
     try:
-        answer = await ask_question(request.question)
+        answer = await ask_question(request.question, request.selectedText)
         return {"answer": answer}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

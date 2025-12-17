@@ -16,6 +16,7 @@ const COLLECTION_NAME = process.env.QDRANT_COLLECTION_NAME || 'textbook_rag';
 
 interface ChatRequest {
     question: string;
+    selectedText?: string;
 }
 
 interface QdrantPayload {
@@ -49,7 +50,7 @@ export default async function handler(
     }
 
     try {
-        const { question } = req.body as ChatRequest;
+        const { question, selectedText } = req.body as ChatRequest;
 
         if (!question || typeof question !== 'string') {
             return res.status(400).json({ error: 'Question is required' });
@@ -103,10 +104,16 @@ export default async function handler(
             preamble: `ROLE: AI Librarian for "AI for Humanity" textbook.
 
 RULES:
-1. Answer ONLY from the provided context from the book
-2. If the answer isn't in the context, say "I couldn't find that information in the AI for Humanity textbook."
-3. Be helpful and provide relevant chapter references when possible
-4. Keep responses clear and concise
+1. Answer ONLY from the provided context from the book.
+2. If the user has SELECTED TEXT (provided below), prioritize answering based on that specific text.
+3. If the answer isn't in the context, say "I couldn't find that information in the AI for Humanity textbook."
+4. Be helpful and provide relevant chapter references when possible.
+5. Keep responses clear and concise.
+
+${selectedText ? `---
+USER SELECTED TEXT (PRIORITY CONTEXT):
+"${selectedText}"
+---` : ''}
 
 Context from the book:
 ${contextDocs}`,
