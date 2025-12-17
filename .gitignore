@@ -21,7 +21,6 @@ nul
 /RUN_LOCALLY_NOW.md
 /TESTING.md
 /ai-for-humanity-textbook.md
-/project_constitution.md
 
 # Local Scripts & Tests
 /start_project.bat
@@ -39,3 +38,6 @@ build_log.txt
 /.clinerules
 /.venv/
 __pycache__/
+
+.vercel
+.env*.local
