@@ -59,8 +59,11 @@ const ChatWidget = () => {
     const controller = new AbortController();
     abortControllerRef.current = controller;
 
+    const isProduction = process.env.NODE_ENV === 'production';
+    const apiUrl = isProduction ? '/api/chat' : 'http://localhost:8000/api/v1/chat';
+
     try {
-      const response = await fetch('http://localhost:8000/api/v1/chat', {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: userMsg }),
@@ -89,14 +92,14 @@ const ChatWidget = () => {
   };
 
   return (
-    <div className="sticky bottom-8 ml-auto mr-8 z-[9999] font-sans">
+    <div className="sticky bottom-4 sm:bottom-8 ml-auto mr-4 sm:mr-8 z-[9999] font-sans">
       <style>{`
         @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
       `}</style>
 
       {isOpen && (
-        <div className="absolute bottom-[5rem] right-0 w-[400px] h-[650px] bg-white/95 backdrop-blur-20 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col overflow-hidden animate-slideUp">
+        <div className="absolute bottom-[4.5rem] right-0 w-[calc(100vw-2rem)] sm:w-[340px] h-[500px] max-h-[70vh] bg-white/95 backdrop-blur-20 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 flex flex-col overflow-hidden animate-slideUp origin-bottom-right">
           <div className="bg-gradient-to-br from-indigo-500 to-purple-500 p-6 text-white flex justify-between items-center relative">
             <div className="font-bold text-lg flex items-center gap-2">
               <Bot size={20} />
