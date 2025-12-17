@@ -11,3 +11,33 @@ nul
 
 # Misc
 .DS_Store
+
+# Local Development & Testing Docs (Excluded per user request)
+/CLAUDE.md
+/DEPLOYMENT.md
+/ENV_TEMPLATE.md
+/HOW_TO_RUN.md
+/QUICKSTART.md
+/RUN_LOCALLY_NOW.md
+/TESTING.md
+/ai-for-humanity-textbook.md
+/project_constitution.md
+
+# Local Scripts & Tests
+/start_project.bat
+/start-backend.bat
+/start-frontend.bat
+/start-with-api.bat
+/verify_backend.py
+/debug_qdrant.py
+/test_rag.py
+
+# Logs
+build_log.txt
+
+# Editor & Python Environments
+/.claude/
+/.clinerules
+/.specify/
+/.venv/
+__pycache__/
