@@ -2,8 +2,8 @@
 
 **Feature Branch**: `001-home-nav-layout`
 **Date**: 2025-11-29
-**Spec**: D:\ai-for-humanity\specs\001-home-nav-layout\spec.md
-**Plan**: D:\ai-for-humanity\specs\001-home-nav-layout\plan.md
+**Spec**: D:\ai-for-humanity-textbook\specs\001-home-nav-layout\spec.md
+**Plan**: D:\ai-for-humanity-textbook\specs\001-home-nav-layout\plan.md
 
 ## Summary
 
@@ -19,10 +19,10 @@ This document outlines the detailed, atomic, and independently executable tasks 
     - [x] T003 Configure `tailwind.config.js` in `./` to include Docusaurus template paths
     - [x] T004 Configure `postcss.config.js` in `./` to use Tailwind CSS and Autoprefixer
     - [x] T005 Configure Docusaurus `docusaurus.config.js` to include custom themes/plugins for Tailwind CSS integration
-    - [ ] T006 Create `./src/components/GlobalHeader.tsx` to scaffold the global navigation component
-    - [ ] T007 Implement Brand/Home Link ("AI For Humanity") in `./src/components/GlobalHeader.tsx` linking to `/`
-    - [ ] T008 Implement Primary Nav ("Book") link in `./src/components/GlobalHeader.tsx` linking to Docusaurus docs introduction (`/docs/intro`)
-    - [ ] T009 Create `./src/components/TranslationToggle.tsx` to scaffold the Urdu/English language switching component
+    - [x] T006 Create `./src/components/GlobalHeader.tsx` to scaffold the global navigation component
+    - [x] T007 Implement Brand/Home Link ("AI For Humanity") in `./src/components/GlobalHeader.tsx` linking to `/`
+    - [x] T008 Implement Primary Nav ("Book") link in `./src/components/GlobalHeader.tsx` linking to Docusaurus docs introduction (`/docs/intro`)
+    - [x] T009 Create `./src/components/TranslationToggle.tsx` to scaffold the Urdu/English language switching component
     - [x] T010 Install `jspdf` or `react-to-pdf` library for PDF generation in `./`
     - [x] T011 Install `reveal.js` or a suitable React-based slide library for slide generation in `./`
 
@@ -30,16 +30,16 @@ This document outlines the detailed, atomic, and independently executable tasks 
 *   **Goal**: Develop the distinct, AI-Native home page with interactive elements and a custom footer.
 *   **Independent Test**: Home page (`/`) loads correctly, displays hero section, interactive cards show hover effects, and custom footer with personal links is present.
 *   **Tasks**:
-    - [ ] T012 [P] [US2] Create `src/pages/index.tsx` to scaffold the custom Home Page
-    - [ ] T013 [P] [US2] Implement Hero Section JSX and basic styling in `src/pages/index.tsx` for title "AI for Humanity" and subtitle
-    - [ ] T014 [P] [US2] Create `src/components/HeroSection.tsx` and move Hero Section content into it, integrating it into `index.tsx`
-    - [ ] T015 [P] [US2] Create `src/components/StructuredCards.tsx` to scaffold the structured cards component
-    - [ ] T016 [P] [US2] Implement card layout and basic content in `src/components/StructuredCards.tsx`
-    - [ ] T017 [P] [US2] Add hover effects using Tailwind CSS to cards in `src/components/StructuredCards.tsx`
-    - [ ] T018 [P] [US2] Integrate `StructuredCards.tsx` into `src/pages/index.tsx`
-    - [ ] T019 [P] [US4] Create `src/components/CustomFooter.tsx` to scaffold the custom footer component
-    - [ ] T020 [P] [US4] Implement GitHub, LinkedIn, and Portfolio links and basic styling in `src/components/CustomFooter.tsx`
-    - [ ] T021 [P] [US4] Integrate `CustomFooter.tsx` into `src/pages/index.tsx`
+    - [x] T012 [P] [US2] Create `src/pages/index.tsx` to scaffold the custom Home Page
+    - [x] T013 [P] [US2] Implement Hero Section JSX and basic styling in `src/pages/index.tsx` for title "AI for Humanity" and subtitle
+    - [x] T014 [P] [US2] Create `src/components/HeroSection.tsx` and move Hero Section content into it, integrating it into `index.tsx`
+    - [x] T015 [P] [US2] Create `src/components/StructuredCards.tsx` to scaffold the structured cards component
+    - [x] T016 [P] [US2] Implement card layout and basic content in `src/components/StructuredCards.tsx`
+    - [x] T017 [P] [US2] Add hover effects using Tailwind CSS to cards in `src/components/StructuredCards.tsx`
+    - [x] T018 [P] [US2] Integrate `StructuredCards.tsx` into `src/pages/index.tsx`
+    - [x] T019 [P] [US4] Create `src/components/CustomFooter.tsx` to scaffold the custom footer component
+    - [x] T020 [P] [US4] Implement GitHub, LinkedIn, and Portfolio links and basic styling in `src/components/CustomFooter.tsx`
+    - [x] T021 [P] [US4] Integrate `CustomFooter.tsx` into `src/pages/index.tsx`
 
 ### Phase 3: Auth & Personalization Logic [US5]
 *   **Goal**: Integrate the Better-Auth library, implement signup/login flows, and store user personalization data.
@@ -67,10 +67,10 @@ This document outlines the detailed, atomic, and independently executable tasks 
 *   **Goal**: Embed a floating RAG-based chatbot across all documentation pages.
 *   **Independent Test**: The RAG chatbot widget is visible and functional on all documentation pages, providing accurate answers based on the book's content.
 *   **Tasks**:
-    - [ ] T045 Create `src/components/RAGWidget.tsx` to scaffold the floating chatbot UI component
-    - [ ] T046 Implement basic chat interface (input, display) in `src/components/RAGWidget.tsx`
-    - [ ] T047 Integrate RAG (Retrieval Augmented Generation) logic into `src/components/RAGWidget.tsx` (client-side or via backend API) to query book content and display responses
-    - [ ] T048 Ensure `src/components/RAGWidget.tsx` is globally accessible on all Docusaurus documentation pages (e.g., by modifying Docusaurus theme layout components)
+    - [x] T045 Create `src/components/RAGWidget.tsx` to scaffold the floating chatbot UI component
+    - [x] T046 Implement basic chat interface (input, display) in `src/components/RAGWidget.tsx`
+    - [x] T047 Integrate RAG (Retrieval Augmented Generation) logic into `src/components/RAGWidget.tsx` (client-side or via backend API) to query book content and display responses
+    - [x] T048 Ensure `src/components/RAGWidget.tsx` is globally accessible on all Docusaurus documentation pages (e.g., by modifying Docusaurus theme layout components)
 
 ## Dependencies
 

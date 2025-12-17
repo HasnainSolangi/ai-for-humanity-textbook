@@ -50,7 +50,7 @@ export default function LandingPage() {
     <Layout title="Home" description="AI for Humanity Textbook">
       {/* Main Wrapper: White in Light Mode, Deep Navy in Dark Mode */}
       <div className="bg-white dark:bg-[#0B0F19] text-slate-900 dark:text-white min-h-screen font-sans transition-colors duration-300">
-        
+
         {/* Hero */}
         <header className="pt-24 pb-32 px-4 text-center border-b border-slate-200 dark:border-gray-800">
           <div className="container mx-auto max-w-5xl">
@@ -68,16 +68,16 @@ export default function LandingPage() {
               <Link className="px-8 py-4 text-lg font-bold rounded-full bg-blue-600 hover:bg-blue-700 dark:hover:bg-blue-500 transition-all text-white no-underline shadow-lg hover:shadow-xl hover:-translate-y-1" to="/docs/00-preface">
                 Start Reading
               </Link>
-              
+
               {/* Secondary Button: SOLID WHITE BACKGROUND for visibility */}
-              <Link 
+              <Link
                 className="px-8 py-4 text-lg font-bold rounded-full 
                            bg-gray-200 dark:bg-gray-800 
                            border-2 border-slate-300 dark:border-gray-600 
                            text-slate-800 dark:text-white 
                            hover:border-blue-500 dark:hover:border-blue-400
                            hover:text-blue-600 dark:hover:text-blue-400
-                           transition-all no-underline hover:-translate-y-1 shadow-sm hover:shadow-md" 
+                           transition-all no-underline hover:-translate-y-1 shadow-sm hover:shadow-md"
                 to="https://github.com/HasnainSolangi">
                 GitHub
               </Link>
@@ -157,14 +157,6 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="py-12 text-center border-t border-slate-200 dark:border-gray-800 bg-white dark:bg-[#02040a]">
-          <div className="container mx-auto px-4">
-            <p className="text-slate-600 dark:text-gray-400 mb-2 font-medium">AI for Humanity • Building Responsible, Enterprise-Grade AI</p>
-            <p className="text-slate-500 dark:text-gray-600 text-sm">• Open Source • Community Driven</p>
-          </div>
-        </footer>
       </div>
     </Layout>
   );

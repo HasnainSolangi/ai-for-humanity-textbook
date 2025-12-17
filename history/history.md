@@ -23,3 +23,17 @@
   - Landing Page Components (`src/components/LandingPage`).
   - RAG Backend (Qdrant + Cohere).
 - **Action**: Resuming from Planning/Implementation phase.
+
+## [2025-12-17] GitHub Pages Cleanup
+- **Cleanup**: Removed all GitHub Pages deployment scripts (`deploy-github-pages.sh`) and configurations.
+- **Configuration**: Reset `docusaurus.config.ts` Base URL to `/` and removed GitHub-specific deployment fields (`organizationName`, `projectName`).
+- **Refactor**: Renamed project identifier from `ai-for-humanity` to `ai-for-humanity-textbook` in `package.json` and backend services, preserving "AI for Humanity" UI titles.
+
+## [2025-12-17] RAG Chatbot & UI Implementation
+- **Chatbot Integration**: Fully implemented and integrated the RAG-based chatbot using Qdrant (vector store) and Cohere (LLM).
+- **Frontend**:
+    - Developed floating chat widget component (`src/components/ChatWidget.tsx`).
+    - Integrated widget globally into Docusaurus layout.
+    - Updated `docusaurus.config.ts` to support new layout and cleaner configuration.
+- **Home Page**: Refined Landing Page (`src/components/LandingPage`) with "Start Reading" and "GitHub" actions, and updated footer links.
+- **Documentation**: Updated `specs` tracking to reflect completion of Chatbot and Home Page phases.

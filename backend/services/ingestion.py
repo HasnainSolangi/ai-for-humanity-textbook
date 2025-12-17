@@ -1,4 +1,9 @@
+import sys
 import os
+
+# Add the parent directory (backend) to sys.path so we can import 'core'
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import glob
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -6,13 +11,13 @@ from langchain_cohere import CohereEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
-from backend.core.config import get_settings
+from core.config import get_settings
 
 settings = get_settings()
 
 def ingest_docs():
     """
-    Reads all markdown files from d:/ai-for-humanity/docs,
+    Reads all markdown files from d:/ai-for-humanity-textbook/docs,
     splits them, and uploads vectors to Qdrant.
     """
     print("🚀 Starting Ingestion Process...")
@@ -27,6 +32,7 @@ def ingest_docs():
 
     for file_path in files:
         try:
+            # Force UTF-8 encoding
             loader = TextLoader(file_path, encoding="utf-8")
             docs = loader.load()
             for doc in docs:
@@ -36,6 +42,8 @@ def ingest_docs():
             documents.extend(docs)
         except Exception as e:
             print(f"⚠️ Failed to load {file_path}: {e}")
+
+    print(f"📄 Loaded {len(documents)} documents from {len(files)} files.")
 
     # 2. Split Text
     text_splitter = RecursiveCharacterTextSplitter(
@@ -47,28 +55,23 @@ def ingest_docs():
     print(f"🔪 Split into {len(splits)} chunks.")
 
     # 3. Connect to Qdrant
-    # If API Key is provided, use Cloud. Else use local (memory or localhost)
     if settings.QDRANT_API_KEY:
         client = QdrantClient(url=settings.QDRANT_URL, api_key=settings.QDRANT_API_KEY)
         print("☁️ Connecting to Qdrant Cloud...")
     else:
-        client = QdrantClient(url=settings.QDRANT_URL) # Likely localhost
+        client = QdrantClient(url=settings.QDRANT_URL)
         print("🏠 Connecting to Qdrant Local...")
 
-    # 4. Check/Create Collection
+    # 4. Recreate Collection (Force Fresh Start)
     collection_name = settings.QDRANT_COLLECTION_NAME
-    collections = client.get_collections().collections
-    exists = any(c.name == collection_name for c in collections)
-    
-    if not exists:
-        print(f"✨ Creating collection '{collection_name}'...")
-        client.create_collection(
-            collection_name=collection_name,
-            vectors_config=models.VectorParams(size=1024, distance=models.Distance.COSINE),
-        )
+    print(f"♻️ Recreating collection '{collection_name}' to ensure fresh data...")
+    client.recreate_collection(
+        collection_name=collection_name,
+        vectors_config=models.VectorParams(size=1024, distance=models.Distance.COSINE),
+    )
 
     # 5. Embed and Upsert
-    print("🧠 Generating embeddings and uploading (this may take a while)...")
+    print("🧠 Generating embeddings and uploading (this will take a few minutes)...")
     embeddings = CohereEmbeddings(
         model="embed-english-v3.0", 
         cohere_api_key=settings.COHERE_API_KEY
@@ -80,9 +83,10 @@ def ingest_docs():
         embedding=embeddings,
     )
     
+    # Batch add to avoid timeouts if possible, though LangChain handles it reasonably well
     vector_store.add_documents(splits)
     
-    print("✅ Ingestion Complete!")
+    print(f"✅ Ingestion Complete! {len(splits)} chunks indexed.")
     return {"status": "success", "chunks_ingested": len(splits)}
 
 if __name__ == "__main__":

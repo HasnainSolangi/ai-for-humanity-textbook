@@ -1,5 +1,5 @@
 {
-  "name": "ai-for-humanity",
+  "name": "ai-for-humanity-textbook",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "deploy:github": "bash deploy-github-pages.sh",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -19,7 +18,10 @@
     "@docusaurus/core": "3.9.2",
     "@docusaurus/preset-classic": "3.9.2",
     "@mdx-js/react": "^3.0.0",
+    "@qdrant/js-client-rest": "^1.11.0",
+    "@vercel/node": "^3.0.0",
     "clsx": "^2.0.0",
+    "cohere-ai": "^7.14.0",
     "lucide-react": "^0.555.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",

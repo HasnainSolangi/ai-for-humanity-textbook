@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.core.config import get_settings
+from core.config import get_settings
 
 settings = get_settings()
 
@@ -28,5 +28,5 @@ def health_check():
     return {"status": "healthy"}
 
 # Include Routers
-from backend.api import routes
+from api import routes
 app.include_router(routes.router, prefix=settings.API_V1_STR)

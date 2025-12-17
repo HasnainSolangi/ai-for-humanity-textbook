@@ -10,7 +10,7 @@
       "Bash(npx tailwindcss:*)",
       "Bash(pip install:*)",
       "Bash(cat:*)",
-      "Bash(D:/ai-for-humanity/.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(D:/ai-for-humanity-textbook/.specify/scripts/bash/check-prerequisites.sh:*)",
       "Bash(git checkout:*)",
       "Bash(git branch:*)",
       "Bash(git rev-parse:*)",

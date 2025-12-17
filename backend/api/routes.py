@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, BackgroundTasks
 from pydantic import BaseModel
-from backend.services.ingestion import ingest_docs
-from backend.services.chat import ask_question
+from services.ingestion import ingest_docs
+from services.chat import ask_question
 
 class ChatRequest(BaseModel):
     question: str

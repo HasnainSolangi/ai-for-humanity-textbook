@@ -2,7 +2,7 @@
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2025-11-29
-**Feature**: [Link to spec.md](D:\ai-for-humanity\specs\001-home-nav-layout\spec.md)
+**Feature**: [Link to spec.md](D:\ai-for-humanity-textbook\specs\001-home-nav-layout\spec.md)
 
 ## Content Quality
 

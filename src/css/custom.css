@@ -34,7 +34,266 @@
 }
 
 /* =========================================
-   Mobile Responsiveness & Readability Additions
+   FOOTER FIX: Remove white space & proper scrolling
+   ========================================= */
+
+/* Ensure full-height layout - NO white space below footer */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Match body background to footer color - CRITICAL for no white space */
+html[data-theme='light'] body {
+  background-color: #242526;
+}
+
+html[data-theme='dark'] body {
+  background-color: #1b1b1d;
+}
+
+/* Docusaurus root container - Full height flexbox */
+#__docusaurus {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content wrapper takes remaining space */
+.main-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+[data-theme='dark'] .main-wrapper {
+  background-color: #0B0F19;
+}
+
+/* Main content area expands to fill space */
+main {
+  flex: 1 0 auto;
+}
+
+/* Footer sticks to bottom naturally */
+footer.footer {
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================
+   ELEGANT MULTI-COLUMN FOOTER LAYOUT
+   ========================================= */
+
+/* Beautiful gradient background */
+footer.footer {
+  background: linear-gradient(180deg, #242526 0%, #1b1b1d 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3.5rem 0 2rem;
+}
+
+/* Footer container spacing */
+footer.footer .container {
+  max-width: 1400px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Footer columns - 5 column grid on desktop */
+footer.footer .footer__links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+footer.footer .footer__col {
+  margin-bottom: 0;
+}
+
+/* Footer section titles */
+footer.footer .footer__title {
+  font-size: 0.813rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+/* Elegant underline for titles */
+footer.footer .footer__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+/* Footer links styling */
+footer.footer .footer__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+footer.footer .footer__link-item {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-left: 0;
+  line-height: 1.5;
+}
+
+/* Elegant hover effect */
+footer.footer .footer__link-item:hover {
+  color: #60a5fa;
+  text-decoration: none;
+  padding-left: 8px;
+}
+
+footer.footer .footer__link-item::before {
+  content: '→';
+  position: absolute;
+  left: -20px;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #60a5fa;
+}
+
+footer.footer .footer__link-item:hover::before {
+  left: -12px;
+  opacity: 1;
+}
+
+/* Footer logo styling */
+footer.footer .footer__logo {
+  margin-bottom: 1.5rem;
+  max-width: 160px;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+footer.footer .footer__logo:hover {
+  opacity: 1;
+}
+
+/* Footer copyright section */
+footer.footer .footer__copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+footer.footer .footer__copyright strong {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================= */
+
+/* Large Desktop: 5 columns */
+@media screen and (min-width: 1280px) {
+  footer.footer .footer__links {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5rem 2rem;
+  }
+}
+
+/* Desktop: 4 columns */
+@media screen and (min-width: 997px) and (max-width: 1279px) {
+  footer.footer .footer__links {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 1.5rem;
+  }
+}
+
+/* Tablet: 3 columns */
+@media screen and (min-width: 768px) and (max-width: 996px) {
+  footer.footer .footer__links {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  footer.footer {
+    padding: 3rem 0 1.5rem;
+  }
+}
+
+/* Mobile: 2 columns */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  footer.footer .footer__links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+  }
+
+  footer.footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  footer.footer .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Small Mobile: 1 column */
+@media screen and (max-width: 479px) {
+  footer.footer .footer__links {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  footer.footer {
+    padding: 2rem 0 1.5rem;
+  }
+
+  footer.footer .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Remove hover effects on small mobile */
+  footer.footer .footer__link-item::before {
+    display: none;
+  }
+
+  footer.footer .footer__link-item:hover {
+    padding-left: 0;
+  }
+
+  footer.footer .footer__title {
+    font-size: 0.875rem;
+  }
+
+  footer.footer .footer__link-item {
+    font-size: 0.813rem;
+  }
+}
+
+/* =========================================
+   Mobile Responsiveness & Readability
    ========================================= */
 
 /* Ensure tables scroll horizontally on small screens */

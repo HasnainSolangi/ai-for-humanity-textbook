@@ -21,7 +21,7 @@ def get_docusaurus_url(filepath: str) -> str:
         code_clean = re.sub(r'^\d+-', '', seg)
         clean_segments.append(code_clean)
         
-    return "/ai-for-humanity/" + "/".join(clean_segments)
+    return "/ai-for-humanity-textbook/" + "/".join(clean_segments)
 
 def get_markdown_title(filepath: str) -> str:
     try:

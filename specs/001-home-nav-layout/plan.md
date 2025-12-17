@@ -1,6 +1,6 @@
 # Implementation Plan: Home Page & Global Navigation Layout
 
-**Branch**: `001-home-nav-layout` | **Date**: 2025-11-29 | **Spec**: D:\ai-for-humanity\specs\001-home-nav-layout\spec.md
+**Branch**: `001-home-nav-layout` | **Date**: 2025-11-29 | **Spec**: D:\ai-for-humanity-textbook\specs\001-home-nav-layout\spec.md
 **Input**: Feature specification from `/specs/001-home-nav-layout/spec.md`
 
 **Note**: This template is filled in by the `/sp.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
@@ -25,7 +25,7 @@ This plan outlines the technical implementation for the "AI for Humanity" platfo
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-The constitution file `D:\ai-for-humanity\.specify\memory\constitution.md` contains placeholder content. For a thorough check, its complete principles are required. Based on general software engineering principles and the stated feature goals, the current plan appears to align with best practices for modularity and maintainability. Gates will be evaluated as 'passing' for this phase, assuming standard development principles.
+The constitution file `D:\ai-for-humanity-textbook\.specify\memory\constitution.md` contains placeholder content. For a thorough check, its complete principles are required. Based on general software engineering principles and the stated feature goals, the current plan appears to align with best practices for modularity and maintainability. Gates will be evaluated as 'passing' for this phase, assuming standard development principles.
 
 ## Project Structure
 
@@ -126,7 +126,7 @@ specs/001-home-nav-layout/
 *   Develop the PDF generation component using `jspdf` or `react-to-pdf` to create chapter summaries.
 *   Develop the React-based slide component that parses MDX content into a slide format.
 
-### Phase 5: Chatbot Integration
+### Phase 5: Chatbot Integration [x] Complete
 *   Develop the floating "RAG Widget" React component.
 *   Integrate the RAG (Retrieval Augmented Generation) logic to answer questions based on book content.
 *   Ensure the chatbot is accessible on all Docusaurus documentation pages.

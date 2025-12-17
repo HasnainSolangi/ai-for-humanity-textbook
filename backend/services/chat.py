@@ -5,11 +5,11 @@ from qdrant_client import QdrantClient
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
-from backend.core.config import get_settings
+from core.config import get_settings
 
 settings = get_settings()
 
-from backend.services.navigation import build_toc
+from services.navigation import build_toc
 
 # Cache the TOC on startup
 FULL_BOOK_INDEX = build_toc()
@@ -34,7 +34,7 @@ def get_rag_chain():
     )
 
     # 2. Retriever
-    retriever = vector_store.as_retriever(search_kwargs={"k": 5})
+    retriever = vector_store.as_retriever(search_kwargs={"k": 20})
 
     # Helper: Generate Docusaurus URL from filename (Redundant with navigation.py but kept for inline use if needed)
     def get_docusaurus_url(filepath: str) -> str:
@@ -50,31 +50,36 @@ def get_rag_chain():
             import re
             clean_seg = re.sub(r'^\d+-', '', seg)
             clean_segments.append(clean_seg)
-        return "/ai-for-humanity/" + "/".join(clean_segments)
+        return "/ai-for-humanity-textbook/" + "/".join(clean_segments)
 
     # 3. Prompt
-    template = """ROLE: AI Librarian for "AI for Humanity".
+    # 3. Prompt
+    template = """You are "AI Book Assistant", an expert AI RAG agent for the "AI for Humanity" book.
 
-RULES:
-1. Greetings: Respond warmly to "Hi", "Salam", etc.
-2. Navigation: If user asks for "Chapter X" or a topic, SEARCH your Index and provide a markdown link: [Read Chapter X](/docs/path...).
-3. Scope: Answer from the book. If the answer isn't there, say "I couldn't find that in the book, but I can help you navigate to relevant sections."
-
-# MASTER BOOK INDEX (Use this to provide Direct Links):
+STRUCTURE & NAVIGATION DATA:
+Below is the MASTER INDEX of the book. Use this STRICTLY to answer questions about "how many chapters", "structure", or to PROVIDE LINKS when asked to "open" or "go to" a section.
 {book_index}
 
-# Instructions:
-1. **Direct Navigation:** If the user asks for a specific Chapter, Part, or Lesson Title (e.g. "Go to Chapter 1", "Open Model Lifecycle"), SEARCH the Master Book Index above.
-   - If you find a match, provide the Direct Link immediately: `[Read Chapter X](<URL>)`.
-2. **Content Questions:** For questions about *concepts*, use the Context below.
-3. **Unknowns:** If not in Index and not in Context, say "I couldn't find that in the book, but I can help you navigate to relevant sections."
+BEHAVIOR RULES:
+1. **Identity**: You are "AI Book Assistant". Never call yourself "Command R" or "Cohere".
+2. **Navigation**: If the user says "Open Part X", "Go to Chapter Y", or "Show me Lesson Z", SEARCH the Index above.
+   - Return a DIRECT markdown link: `[Open Chapter title](url)`.
+   - Distinguish between Parts, Chapters, and Lessons based on the titles in the index.
+3. **Content**: Answer questions strictly from the "AI for Humanity" dataset (Context) or the Index.
+4. **Context vs Index**:
+   - Use **Index** for: "How many chapters?", "List the parts", "Open Chapter 1".
+   - Use **Context** for: "Summarize Chapter 1", "What is AI?", "Explain ethics".
+   
+5. **No Hallucinations**: If it's not in the Index or Context, say "Information not available."
 
-Context:
+CONTEXT FROM VECTOR QUERY:
 {context}
 
-Question: {question}
+USER QUESTION: 
+{question}
 
-Answer:"""
+YOUR RESPONSE:
+"""
     
     prompt = ChatPromptTemplate.from_template(template).partial(book_index=FULL_BOOK_INDEX)
 
@@ -108,16 +113,29 @@ Answer:"""
 
 async def ask_question(question: str):
     # Greeting Bypass: Check for greetings and return polite static response immediately
-    greeting_patterns = ["hi", "hello", "hey", "greetings", "salam", "assalam", "good morning", "good afternoon", "good evening"]
+    # Only if the message is short (likely just a greeting) to avoid blocking actual questions like "Hi, what is AI?"
+    import re
+    greeting_patterns = [r'\bhi\b', r'\bhello\b', r'\bhey\b', r'\bgreetings\b', r'\bsalam\b', r'\bassalam\b']
     question_lower = question.lower().strip()
 
+    is_greeting = False
     for pattern in greeting_patterns:
-        if pattern in question_lower:
-            if "salam" in question_lower or "assalam" in question_lower:
-                return "Walaikum assalam! Welcome to the AI for Humanity textbook. How can I assist you with navigating or understanding the content today?"
-            else:
-                return "Hello! Welcome to the AI for Humanity textbook. How can I assist you with navigating or understanding the content today?"
+        if re.search(pattern, question_lower):
+            is_greeting = True
+            break
+            
+    if is_greeting and len(question.split()) < 4:
+         if "salam" in question_lower or "assalam" in question_lower:
+             return "Walaikum assalam! I am your AI Book Assistant for the AI for Humanity textbook. How can I help you navigate or understand the book today?"
+         else:
+             return "Hello! I am your AI Book Assistant for the AI for Humanity textbook. How can I help you navigate or understand the book today?"
 
-    chain = get_rag_chain()
-    response = chain.invoke(question)
-    return response
+    try:
+        chain = get_rag_chain()
+        response = chain.invoke(question)
+        return response
+    except Exception as e:
+        print(f"ERROR in RAG chain: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return f"I encountered an error while searching the textbook. Please make sure Qdrant and Cohere are properly configured. Error: {str(e)}"
