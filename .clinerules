@@ -1,0 +1,6 @@
+- Always use TypeScript for new code
+- Follow Docusaurus best practices
+- Use functional React components
+- Add proper error handling
+- Comment complex logic
+- Use environment variables for API keys

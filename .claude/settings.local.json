@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch:*)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh:*)",
+      "Bash(.specify/scripts/bash/setup-plan.sh:*)",
+      "Bash(.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(pip install:*)",
+      "Bash(cat:*)",
+      "Bash(D:/ai-for-humanity/.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(git checkout:*)",
+      "Bash(git branch:*)",
+      "Bash(git rev-parse:*)",
+      "WebSearch",
+      "Bash(dir history /s)",
+      "Bash(dir \"history/prompts\" /s)",
+      "Bash(dir backendcore /s)",
+      "Bash(dir \"backend\\core\" /s)",
+      "Bash(dir src /s)",
+      "Bash(dir \"src\\theme\" /s)",
+      "Bash(npm run deploy:github)",
+      "Bash(npm run build)",
+      "Bash(dir)",
+      "Bash(git remote add origin https://github.com/HasnainSolangi/ai-for-humanity-book.git)",
+      "Bash(git push -f origin HEAD:gh-pages)",
+      "Bash(dir .git)",
+      "Bash(git init)",
+      "Bash(git add .)",
+      "Bash(git commit -m \"Deploy AI for Humanity book to GitHub Pages\")",
+      "Bash(dir docs)",
+      "Bash(dir \"D:\\ai-for-humanity\\build\")",
+      "Bash(git config --local user.email \"hasnain@example.com\")",
+      "Bash(git config --local user.name \"Hasnain Solangi\")",
+      "Bash(git commit -m \"Deploy to GitHub Pages\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
