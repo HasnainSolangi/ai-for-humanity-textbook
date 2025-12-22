@@ -22,16 +22,30 @@ nul
 /TESTING.md
 /ai-for-humanity-textbook.md
 
+# RAG Implementation - Testing & Roadmap Files (Local Only)
+/CHATBOT_STATUS.txt
+/CHATBOT_SETUP.md
+/DOCUMENTATION_GUIDE.md
+/RAG_IMPLEMENTATION_COMPLETE.md
+/specs/RAG_IMPLEMENTATION_README.md
+/specs/RAG_STATUS_REPORT.md
+/specs/URDU_LOCALIZATION_FIX.md
+/specs/rag_chatbot_prompt.md
+
 # Local Scripts & Tests
 /start_project.bat
 /start-backend.bat
 /start-frontend.bat
 /start-with-api.bat
+/start_backend.bat
+/start_backend.py
+/start_backend_rag.bat
 /verify_backend.py
 /debug_qdrant.py
 /test_rag.py
 
 # Logs
+build_log_tmp.txt
 build_log.txt
 
 # Editor & Python Environments

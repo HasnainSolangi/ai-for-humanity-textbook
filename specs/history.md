@@ -37,3 +37,30 @@
     - Updated `docusaurus.config.ts` to support new layout and cleaner configuration.
 - **Home Page**: Refined Landing Page (`src/components/LandingPage`) with "Start Reading" and "GitHub" actions, and updated footer links.
 - **Documentation**: Updated `specs` tracking to reflect completion of Chatbot and Home Page phases.
+
+## [2025-12-18] Multilingual RAG Chatbot Enhancement
+- **Data Ingestion**: Expanded document corpus to 197 files (98 English + 99 Urdu)
+  - English source: `docs/` directory (all 9 parts)
+  - Urdu source: `i18n/ur/` directory (complete translations)
+  - Result: 838 chunks indexed (413 English + 425 Urdu)
+- **Language Detection**: Implemented automatic language detection using Unicode pattern matching
+  - Detects Urdu using U+0600-U+06FF block with 30% threshold
+  - Routes questions to language-specific RAG chains
+  - Enables seamless bilingual conversations
+- **Dual RAG Chains**: Created separate RAG pipelines with language-specific prompts
+  - English chain: Uses English-optimized prompts and context
+  - Urdu chain: Uses Urdu-optimized prompts and context
+  - Both chains query same vector store with language-filtered retrieval
+- **Backend Infrastructure**:
+  - Enhanced `backend/services/ingestion.py` with batch processing (25 chunks/batch)
+  - Implemented rate limiting and exponential backoff for Cohere API
+  - FastAPI backend running on port 8000 with operational /api/v1/chat endpoint
+  - Status: All endpoints returning 200 OK with successful responses
+- **Technologies**: 
+  - Vector Database: Qdrant Cloud (language-aware embeddings)
+  - Embeddings: Cohere embed-english-v3.0 (supports 100+ languages)
+  - LLM: Cohere command-r-08-2024 (multilingual)
+  - Processing: LangChain, FastAPI, Python
+- **Testing**: Verified with English, Urdu, greeting, and navigation queries
+- **Ready for Deployment**: All code production-ready for Render.com backend and Vercel frontend
+

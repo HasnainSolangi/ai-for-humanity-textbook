@@ -71,7 +71,7 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs/00-preface',
+          to: 'docs/00-preface',
           label: 'Book',
           position: 'left',
           activeBasePath: 'docs',
@@ -87,6 +87,16 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          to: 'login',
+          label: 'Log In',
+          position: 'right',
+        },
+        {
+          to: 'signup',
+          label: 'Sign Up',
+          position: 'right',
+        },
       ],
     },
     footer: {
@@ -96,10 +106,10 @@ const config: Config = {
         {
           title: 'Documentation',
           items: [
-            { label: 'Book', to: '/docs/00-preface' },
-            { label: 'Getting Started', to: '/docs/00-preface' },
-            { label: 'Tutorials', to: '/docs/00-preface' },
-            { label: 'API Reference', to: '/docs/00-preface' },
+            { label: 'Book', to: 'docs/00-preface' },
+            { label: 'Getting Started', to: 'docs/00-preface' },
+            { label: 'Tutorials', to: 'docs/00-preface' },
+            { label: 'API Reference', to: 'docs/00-preface' },
           ],
         },
         {

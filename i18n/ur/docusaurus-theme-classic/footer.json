@@ -1,0 +1,258 @@
+{
+  "link.title.Documentation": {
+    "message": "دستاویزات",
+    "description": "The title of the footer links column with title=Documentation in the footer"
+  },
+  "link.title.Community": {
+    "message": "کمیونٹی",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.Content & Blog": {
+    "message": "مواد اور بلاگ",
+    "description": "The title of the footer links column with title=Content & Blog in the footer"
+  },
+  "link.title.Professional": {
+    "message": "پیشہ ورانہ",
+    "description": "The title of the footer links column with title=Professional in the footer"
+  },
+  "link.title.Open Source": {
+    "message": "اوپن سورس",
+    "description": "The title of the footer links column with title=Open Source in the footer"
+  },
+  "link.title.Learning & Teaching": {
+    "message": "سیکھنا اور سکھانا",
+    "description": "The title of the footer links column with title=Learning & Teaching in the footer"
+  },
+  "link.title.Design & Creative": {
+    "message": "ڈیزائن اور تخلیق",
+    "description": "The title of the footer links column with title=Design & Creative in the footer"
+  },
+  "link.title.Tech Communities": {
+    "message": "ٹیکنالوجی کمیونٹیز",
+    "description": "The title of the footer links column with title=Tech Communities in the footer"
+  },
+  "link.title.Contact & Support": {
+    "message": "رابطہ اور مدد",
+    "description": "The title of the footer links column with title=Contact & Support in the footer"
+  },
+  "link.title.More Platforms": {
+    "message": "مزید پلیٹ فارمز",
+    "description": "The title of the footer links column with title=More Platforms in the footer"
+  },
+  "link.item.label.Book": {
+    "message": "کتاب",
+    "description": "The label of footer link with label=Book linking to /docs/00-preface"
+  },
+  "link.item.label.Getting Started": {
+    "message": "شروعات کیسے کریں",
+    "description": "The label of footer link with label=Getting Started linking to /docs/00-preface"
+  },
+  "link.item.label.Tutorials": {
+    "message": "ٹیوٹوریلز",
+    "description": "The label of footer link with label=Tutorials linking to /docs/00-preface"
+  },
+  "link.item.label.API Reference": {
+    "message": "اے پی آئی حوالہ",
+    "description": "The label of footer link with label=API Reference linking to /docs/00-preface"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/HasnainSolangi"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "The label of footer link with label=LinkedIn linking to https://linkedin.com/in/hasnain-solangi"
+  },
+  "link.item.label.Twitter/X": {
+    "message": "Twitter/X",
+    "description": "The label of footer link with label=Twitter/X linking to https://twitter.com/HasnainSolangi"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "The label of footer link with label=Facebook linking to https://facebook.com/HasnainSolangi"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/yourserver"
+  },
+  "link.item.label.Stack Overflow": {
+    "message": "Stack Overflow",
+    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/users/yourprofile"
+  },
+  "link.item.label.Medium Blog": {
+    "message": "Medium Blog",
+    "description": "The label of footer link with label=Medium Blog linking to https://medium.com/@HasnainSolangi"
+  },
+  "link.item.label.Dev.to": {
+    "message": "Dev.to",
+    "description": "The label of footer link with label=Dev.to linking to https://dev.to/hasnainsolangi"
+  },
+  "link.item.label.Hashnode": {
+    "message": "Hashnode",
+    "description": "The label of footer link with label=Hashnode linking to https://hashnode.com/@HasnainSolangi"
+  },
+  "link.item.label.Personal Blog": {
+    "message": "ذاتی بلاگ",
+    "description": "The label of footer link with label=Personal Blog linking to https://yourblog.com"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "The label of footer link with label=YouTube linking to https://youtube.com/@HasnainSolangi"
+  },
+  "link.item.label.Newsletter": {
+    "message": "نیوز لیٹر",
+    "description": "The label of footer link with label=Newsletter linking to https://newsletter.yoursite.com"
+  },
+  "link.item.label.Portfolio": {
+    "message": "پورٹ فولیو",
+    "description": "The label of footer link with label=Portfolio linking to https://hasnainsolangi.com"
+  },
+  "link.item.label.Resume/CV": {
+    "message": "رزومہ / سی وی",
+    "description": "The label of footer link with label=Resume/CV linking to https://hasnainsolangi.com/resume"
+  },
+  "link.item.label.Upwork": {
+    "message": "Upwork",
+    "description": "The label of footer link with label=Upwork linking to https://upwork.com/freelancers/~yourprofile"
+  },
+  "link.item.label.Fiverr": {
+    "message": "Fiverr",
+    "description": "The label of footer link with label=Fiverr linking to https://fiverr.com/hasnainsolangi"
+  },
+  "link.item.label.Toptal": {
+    "message": "Toptal",
+    "description": "The label of footer link with label=Toptal linking to https://toptal.com/resume/hasnain-solangi"
+  },
+  "link.item.label.AngelList": {
+    "message": "AngelList",
+    "description": "The label of footer link with label=AngelList linking to https://angel.co/u/hasnain-solangi"
+  },
+  "link.item.label.GitHub Sponsors": {
+    "message": "GitHub Sponsors",
+    "description": "The label of footer link with label=GitHub Sponsors linking to https://github.com/sponsors/HasnainSolangi"
+  },
+  "link.item.label.npm Packages": {
+    "message": "npm Packages",
+    "description": "The label of footer link with label=npm Packages linking to https://npmjs.com/~hasnainsolangi"
+  },
+  "link.item.label.PyPI Packages": {
+    "message": "PyPI Packages",
+    "description": "The label of footer link with label=PyPI Packages linking to https://pypi.org/user/HasnainSolangi"
+  },
+  "link.item.label.Docker Hub": {
+    "message": "Docker Hub",
+    "description": "The label of footer link with label=Docker Hub linking to https://hub.docker.com/u/hasnainsolangi"
+  },
+  "link.item.label.Open Collective": {
+    "message": "Open Collective",
+    "description": "The label of footer link with label=Open Collective linking to https://opencollective.com/hasnainsolangi"
+  },
+  "link.item.label.Udemy Courses": {
+    "message": "Udemy کورسز",
+    "description": "The label of footer link with label=Udemy Courses linking to https://udemy.com/user/hasnain-solangi"
+  },
+  "link.item.label.Coursera": {
+    "message": "Coursera",
+    "description": "The label of footer link with label=Coursera linking to https://coursera.org/instructor/hasnainsolangi"
+  },
+  "link.item.label.Khan Academy": {
+    "message": "Khan Academy",
+    "description": "The label of footer link with label=Khan Academy linking to https://khanacademy.org/profile/hasnainsolangi"
+  },
+  "link.item.label.freeCodeCamp": {
+    "message": "freeCodeCamp",
+    "description": "The label of footer link with label=freeCodeCamp linking to https://freecodecamp.org/hasnainsolangi"
+  },
+  "link.item.label.Codecademy": {
+    "message": "Codecademy",
+    "description": "The label of footer link with label=Codecademy linking to https://codecademy.com/profiles/hasnainsolangi"
+  },
+  "link.item.label.Dribbble": {
+    "message": "Dribbble",
+    "description": "The label of footer link with label=Dribbble linking to https://dribbble.com/HasnainSolangi"
+  },
+  "link.item.label.Behance": {
+    "message": "Behance",
+    "description": "The label of footer link with label=Behance linking to https://behance.net/HasnainSolangi"
+  },
+  "link.item.label.Figma Community": {
+    "message": "Figma ک کمیونٹی",
+    "description": "The label of footer link with label=Figma Community linking to https://figma.com/@hasnainsolangi"
+  },
+  "link.item.label.CodePen": {
+    "message": "CodePen",
+    "description": "The label of footer link with label=CodePen linking to https://codepen.io/HasnainSolangi"
+  },
+  "link.item.label.Awwwards": {
+    "message": "Awwwards",
+    "description": "The label of footer link with label=Awwwards linking to https://awwwards.com/HasnainSolangi"
+  },
+  "link.item.label.Reddit Profile": {
+    "message": "Reddit Profile",
+    "description": "The label of footer link with label=Reddit Profile linking to https://reddit.com/user/HasnainSolangi"
+  },
+  "link.item.label.Hacker News": {
+    "message": "Hacker News",
+    "description": "The label of footer link with label=Hacker News linking to https://news.ycombinator.com/user?id=HasnainSolangi"
+  },
+  "link.item.label.Product Hunt": {
+    "message": "Product Hunt",
+    "description": "The label of footer link with label=Product Hunt linking to https://producthunt.com/@hasnain_solangi"
+  },
+  "link.item.label.Indie Hackers": {
+    "message": "Indie Hackers",
+    "description": "The label of footer link with label=Indie Hackers linking to https://indiehackers.com/HasnainSolangi"
+  },
+  "link.item.label.Showwcase": {
+    "message": "Showwcase",
+    "description": "The label of footer link with label=Showwcase linking to https://showwcase.com/hasnainsolangi"
+  },
+  "link.item.label.Email": {
+    "message": "ای میل",
+    "description": "The label of footer link with label=Email linking to mailto:hasnain@example.com"
+  },
+  "link.item.label.Calendly": {
+    "message": "Calendly",
+    "description": "The label of footer link with label=Calendly linking to https://calendly.com/hasnainsolangi"
+  },
+  "link.item.label.Buy Me a Coffee": {
+    "message": "Buy Me a Coffee",
+    "description": "The label of footer link with label=Buy Me a Coffee linking to https://buymeacoffee.com/hasnainsolangi"
+  },
+  "link.item.label.Ko-fi": {
+    "message": "Ko-fi",
+    "description": "The label of footer link with label=Ko-fi linking to https://ko-fi.com/hasnainsolangi"
+  },
+  "link.item.label.Patreon": {
+    "message": "Patreon",
+    "description": "The label of footer link with label=Patreon linking to https://patreon.com/HasnainSolangi"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "The label of footer link with label=Instagram linking to https://instagram.com/HasnainSolangi"
+  },
+  "link.item.label.TikTok": {
+    "message": "TikTok",
+    "description": "The label of footer link with label=TikTok linking to https://tiktok.com/@hasnainsolangi"
+  },
+  "link.item.label.Twitch": {
+    "message": "Twitch",
+    "description": "The label of footer link with label=Twitch linking to https://twitch.tv/HasnainSolangi"
+  },
+  "link.item.label.Spotify Podcasts": {
+    "message": "Spotify Podcasts",
+    "description": "The label of footer link with label=Spotify Podcasts linking to https://open.spotify.com/show/yourpodcast"
+  },
+  "link.item.label.Apple Podcasts": {
+    "message": "Apple Podcasts",
+    "description": "The label of footer link with label=Apple Podcasts linking to https://podcasts.apple.com/podcast/yourpodcast"
+  },
+  "link.item.label.Substack": {
+    "message": "Substack",
+    "description": "The label of footer link with label=Substack linking to https://hasnainsolangi.substack.com"
+  },
+  "copyright": {
+    "message": "\"انسانیت کے لیے اے آئی\" © 2025 حسنین احمد",
+    "description": "The footer copyright"
+  }
+}

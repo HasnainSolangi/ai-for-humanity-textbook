@@ -19,6 +19,7 @@ const ChatWidget = () => {
     const handleSelectionChange = () => {
       const selection = window.getSelection();
       const text = selection ? selection.toString().trim() : '';
+      // Only update if there's an actual selection to avoid clearing on accidental clicks
       if (text.length > 0) {
         setSelectedContext(text);
       }
@@ -27,6 +28,18 @@ const ChatWidget = () => {
     document.addEventListener('selectionchange', handleSelectionChange);
     return () => document.removeEventListener('selectionchange', handleSelectionChange);
   }, []);
+
+  const toggleChat = () => {
+    if (!isOpen) {
+      // Try to capture current selection one last time when opening
+      const selection = window.getSelection();
+      const text = selection ? selection.toString().trim() : '';
+      if (text.length > 0) {
+        setSelectedContext(text);
+      }
+    }
+    setIsOpen(!isOpen);
+  };
 
   const scrollToBottom = () => {
     if (messagesEndRef.current) {
@@ -226,7 +239,7 @@ const ChatWidget = () => {
       <button
         className={`bg-gradient-to-br from-indigo-500 to-purple-500 text-white rounded-full p-4 shadow-lg cursor-pointer flex items-center gap-2 justify-center transition-all duration-300 ${isHovered ? 'transform -translate-y-1 shadow-xl' : ''
           }`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleChat}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

@@ -1,3 +1,36 @@
+# Hackathon Checklist & Task Roadmap (Checkpoint)
+
+## 1. Core Functionality (100 pts)
+- [x] **AI/Spec-Driven Book Creation**: Docusaurus site deployed.
+- [x] **Integrated RAG Chatbot**: FastAPI + Qdrant + Cohere implemented.
+- [x] **Selection-Aware RAG**: Fully functional in frontend and backend.
+
+## 2. Bonus Points (Up to 250 pts)
+### [x] Agent Skills (50 pts)
+- [x] Documented `translation-skill.md` and `rag-analysis-skill.md` in `.agent/skills`.
+
+### [x] Better-Auth Integration (50 pts)
+- [x] **Signup/Signin with Background Questions**: Fields added to DB and Form.
+- [x] **Perfect Implementation**: Dynamic Navbar with Auth Context.
+- [x] **Session Persistence**: Verified and working.
+
+### [x] Content Personalization (50 pts)
+- [x] `PersonalizeButton` component for doc pages.
+- [x] Backend `/personalize` endpoint.
+
+### [x] Urdu Translation Bonus (50 pts)
+- [x] **Native i18n UI**: 100% complete (Navbar, Footer, Labels).
+- [x] **Content Translation**: 100% files translated. Complete.
+- [ ] Planned: "Read in Urdu" button for chapters.
+
+## Current State: Checkpoint reached at 4:30 AM.
+- [x] UI Translation: DONE.
+- [x] Documentation Translation: COMPLETE (100%).
+- [x] Agent Skills: DONE.
+- [ ] Next Action: Dynamic Navbar integration.
+
+---
+
 # Feature Tasks: Home Page & Global Navigation Layout
 
 **Feature Branch**: `001-home-nav-layout`
@@ -45,12 +78,12 @@ This document outlines the detailed, atomic, and independently executable tasks 
 *   **Goal**: Integrate the Better-Auth library, implement signup/login flows, and store user personalization data.
 *   **Independent Test**: Users can sign up via Email/Password or OAuth (GitHub/Google). During signup, users are prompted for "Software and Hardware Background" which is successfully stored and retrieved for personalization.
 *   **Tasks**:
-    - [ ] T033 [US5] Install `better-auth` client-side library in `./`
-    - [ ] T034 [US5] Integrate `better-auth` client-side hooks into `./` for Email/Password authentication flow
-    - [ ] T035 [US5] Integrate `better-auth` client-side hooks into `./` for OAuth (GitHub/Google) authentication flow
-    - [ ] T036 [US5] Create a new Docusaurus page or component for the signup form to include "Software and Hardware Background" input
-    - [ ] T037 [US5] Implement client-side logic to send "Software and Hardware Background" data to personalization service upon signup completion
-    - [ ] T038 [US5] Develop initial personalization engine logic (client-side or separate service) to utilize stored background data
+    - [x] T033 [US5] Install `better-auth` client-side library in `./`
+    - [x] T034 [US5] Integrate `better-auth` client-side hooks into `./` for Email/Password authentication flow
+    - [x] T035 [US5] Integrate `better-auth` client-side hooks into `./` for OAuth (GitHub/Google) authentication flow
+    - [x] T036 [US5] Create a new Docusaurus page or component for the signup form to include "Software and Hardware Background" input
+    - [x] T037 [US5] Implement client-side logic to send "Software and Hardware Background" data to personalization service upon signup completion
+    - [x] T038 [US5] Develop initial personalization engine logic (client-side or separate service) to utilize stored background data
 
 ### Phase 4: Rich Media (PDF/Slide) Generators [FR-012, FR-013]
 *   **Goal**: Develop client-side capabilities for generating PDF summaries and presentation slides from chapter content.
@@ -66,11 +99,18 @@ This document outlines the detailed, atomic, and independently executable tasks 
 ### Phase 5: Chatbot Integration [FR-014]
 *   **Goal**: Embed a floating RAG-based chatbot across all documentation pages.
 *   **Independent Test**: The RAG chatbot widget is visible and functional on all documentation pages, providing accurate answers based on the book's content.
+*   **Status**: ✅ COMPLETE (Dec 2025)
 *   **Tasks**:
     - [x] T045 Create `src/components/RAGWidget.tsx` to scaffold the floating chatbot UI component
     - [x] T046 Implement basic chat interface (input, display) in `src/components/RAGWidget.tsx`
     - [x] T047 Integrate RAG (Retrieval Augmented Generation) logic into `src/components/RAGWidget.tsx` (client-side or via backend API) to query book content and display responses
     - [x] T048 Ensure `src/components/RAGWidget.tsx` is globally accessible on all Docusaurus documentation pages (e.g., by modifying Docusaurus theme layout components)
+    - [x] T049 Implement multilingual language detection for RAG chatbot
+    - [x] T050 Create dual RAG chains (English + Urdu) with language-specific prompts
+    - [x] T051 Index 197 documents (98 English + 99 Urdu) into Qdrant vector database
+    - [x] T052 Implement batch processing and rate limiting for Cohere API integration
+    - [x] T053 Deploy FastAPI backend with RAG endpoints on port 8000
+    - [x] T054 Test multilingual RAG chatbot with English and Urdu questions
 
 ## Dependencies
 

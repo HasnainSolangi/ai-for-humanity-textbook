@@ -34,7 +34,12 @@
       "Bash(dir \"D:\\ai-for-humanity\\build\")",
       "Bash(git config --local user.email \"hasnain@example.com\")",
       "Bash(git config --local user.name \"Hasnain Solangi\")",
-      "Bash(git commit -m \"Deploy to GitHub Pages\")"
+      "Bash(git commit -m \"Deploy to GitHub Pages\")",
+      "Bash(dir /s)",
+      "Bash(cmd /c \"dir /s\")",
+      "Bash(npx docusaurus start --port 3003)",
+      "Bash(npx docusaurus build)",
+      "Bash(dir apiauth)"
     ],
     "deny": [],
     "ask": []

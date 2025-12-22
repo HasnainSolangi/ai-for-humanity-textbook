@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "انسانیت کے لیے اے آئی",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "لوگو: انسانیت کے لیے اے آئی",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Book": {
+    "message": "کتاب",
+    "description": "Navbar item with label Book"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Log In": {
+    "message": "لاگ ان",
+    "description": "Navbar item with label Log In"
+  },
+  "item.label.Sign Up": {
+    "message": "سائن اپ",
+    "description": "Navbar item with label Sign Up"
+  }
+}

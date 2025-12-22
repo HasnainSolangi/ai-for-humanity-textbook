@@ -20,6 +20,15 @@ class Settings(BaseSettings):
     # Database (Neon/Postgres)
     DATABASE_URL: str = os.getenv("DATABASE_URL", "")
 
+    # Authentication
+    SECRET_KEY: str = os.getenv("SECRET_KEY", "dev-secret-key-change-in-production")
+
+    # OAuth Providers
+    GITHUB_CLIENT_ID: str = os.getenv("GITHUB_CLIENT_ID", "")
+    GITHUB_CLIENT_SECRET: str = os.getenv("GITHUB_CLIENT_SECRET", "")
+    GOOGLE_CLIENT_ID: str = os.getenv("GOOGLE_CLIENT_ID", "")
+    GOOGLE_CLIENT_SECRET: str = os.getenv("GOOGLE_CLIENT_SECRET", "")
+
     # CORS - Allow ALL origins for Hackathon/Demo flexibility
     BACKEND_CORS_ORIGINS: list[str] = ["*"]
 

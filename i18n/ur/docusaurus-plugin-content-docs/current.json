@@ -1,0 +1,214 @@
+{
+  "version.label": {
+    "message": "موجودہ ورژن",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Part 1: Foundations": {
+    "message": "حصہ 1: بنیادیں",
+    "description": "The label for category 'Part 1: Foundations' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.1. The Case for Institutional Intelligence": {
+    "message": "1. ادارہ جاتی ذہانت کی ضرورت",
+    "description": "The label for category '1. The Case for Institutional Intelligence' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.1. The Case for Institutional Intelligence.link.generated-index.title": {
+    "message": "باب 1: ادارہ جاتی ذہانت کا پس منظر",
+    "description": "The generated-index page title for category '1. The Case for Institutional Intelligence' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.2. Concepts and Mental Models": {
+    "message": "2. تصورات اور ذہنی ماڈل",
+    "description": "The label for category '2. Concepts and Mental Models' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.2. Concepts and Mental Models.link.generated-index.title": {
+    "message": "باب 2: بنیادی تصورات اور ذہنی فریم ورک",
+    "description": "The generated-index page title for category '2. Concepts and Mental Models' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.3. Responsible Design Principles": {
+    "message": "3. ذمہ دارانہ ڈیزائن کے اصول",
+    "description": "The label for category '3. Responsible Design Principles' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.3. Responsible Design Principles.link.generated-index.title": {
+    "message": "باب 3: اخلاقی اور ذمہ دارانہ ڈیزائن کے اصول",
+    "description": "The generated-index page title for category '3. Responsible Design Principles' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Part 2: Humane AI Design": {
+    "message": "حصہ 2: انسانی بنیادوں پر مبنی اے آئی ڈیزائن",
+    "description": "The label for category 'Part 2: Humane AI Design' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.4. Ethics into Engineering: From Principles to Patterns": {
+    "message": "4. انجنیئرنگ میں اخلاقیات: اصولوں سے عملی نمونوں تک",
+    "description": "The label for category '4. Ethics into Engineering: From Principles to Patterns' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.4. Ethics into Engineering: From Principles to Patterns.link.generated-index.title": {
+    "message": "باب 4: عملی انجنیئرنگ میں اخلاقی پہلو",
+    "description": "The generated-index page title for category '4. Ethics into Engineering: From Principles to Patterns' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.5. Human-Centered Interaction Design": {
+    "message": "5. انسان دوست تعاملی ڈیزائن",
+    "description": "The label for category '5. Human-Centered Interaction Design' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.5. Human-Centered Interaction Design.link.generated-index.title": {
+    "message": "باب 5: انسان پر مبنی تعامل اور تجربہ",
+    "description": "The generated-index page title for category '5. Human-Centered Interaction Design' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.6. Measurement and Evaluation": {
+    "message": "6. پیمائش اور تشخیص",
+    "description": "The label for category '6. Measurement and Evaluation' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.6. Measurement and Evaluation.link.generated-index.title": {
+    "message": "باب 6: اے آئی سسٹمز کی کارکردگی کا جائزہ",
+    "description": "The generated-index page title for category '6. Measurement and Evaluation' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Part 3: Enterprise Reliability Engineering": {
+    "message": "حصہ 3: انٹرپرائز لیول کی قابلِ اعتماد انجینئرنگ",
+    "description": "The label for category 'Part 3: Enterprise Reliability Engineering' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.7. Architectural Foundations for Enterprise AI": {
+    "message": "7. انٹرپرائز اے آئی کے لیے تعمیراتی بنیادیں",
+    "description": "The label for category '7. Architectural Foundations for Enterprise AI' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.7. Architectural Foundations for Enterprise AI.link.generated-index.title": {
+    "message": "باب 7: بڑے پیمانے پر اے آئی کے لیے آرکیٹیکچر",
+    "description": "The generated-index page title for category '7. Architectural Foundations for Enterprise AI' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.8. Secure & Resilient Infrastructure": {
+    "message": "8. محفوظ اور پائیدار انفراسٹرکچر",
+    "description": "The label for category '8. Secure & Resilient Infrastructure' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.8. Secure & Resilient Infrastructure.link.generated-index.title": {
+    "message": "باب 8: اے آئی کے لیے مستحکم اور محفوظ ڈھانچہ",
+    "description": "The generated-index page title for category '8. Secure & Resilient Infrastructure' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.9. Observability, Monitoring & SLOs": {
+    "message": "9. مشاہدہ، نگرانی اور سروس لیول اہداف (SLOs)",
+    "description": "The label for category '9. Observability, Monitoring & SLOs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.9. Observability, Monitoring & SLOs.link.generated-index.title": {
+    "message": "باب 9: سسٹم کی کارکردگی اور نگرانی",
+    "description": "The generated-index page title for category '9. Observability, Monitoring & SLOs' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.10. SRE & MLOps Best Practices": {
+    "message": "10. SRE اور MLOps کے بہترین طریقے",
+    "description": "The label for category '10. SRE & MLOps Best Practices' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.10. SRE & MLOps Best Practices.link.generated-index.title": {
+    "message": "باب 10: آپریشنل عمدگی: SRE اور MLOps کا سنگم",
+    "description": "The generated-index page title for category '10. SRE & MLOps Best Practices' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Part 4: Sector Playbooks": {
+    "message": "حصہ 4: مختلف شعبوں کے لیے گائیڈ لائنز",
+    "description": "The label for category 'Part 4: Sector Playbooks' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.11. Health Tech Playbook": {
+    "message": "11. ہیلتھ ٹیک (صحت) گائیڈ بک",
+    "description": "The label for category '11. Health Tech Playbook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.12. Education Tech Playbook": {
+    "message": "12. ایڈ ٹیک (تعلیم) گائیڈ بک",
+    "description": "The label for category '12. Education Tech Playbook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.13. Government & Public Service Playbook": {
+    "message": "13. حکومت اور عوامی خدمات کے لیے گائیڈ بک",
+    "description": "The label for category '13. Government & Public Service Playbook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.14. Finance & Insurance Playbook": {
+    "message": "14. مالیات اور انشورنس کے لیے گائیڈ بک",
+    "description": "The label for category '14. Finance & Insurance Playbook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.15. NGOs & Social Good Playbook": {
+    "message": "15. این جی اوز اور فلاحی کاموں کے لیے گائیڈ بک",
+    "description": "The label for category '15. NGOs & Social Good Playbook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.16. Industrial & Manufacturing Playbook": {
+    "message": "16. صنعتی اور پیداواری شعبوں کے لیے گائیڈ بک",
+    "description": "The label for category '16. Industrial & Manufacturing Playbook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Part 5: Autonomous Systems": {
+    "message": "حصہ 5: خود مختار سسٹمز",
+    "description": "The label for category 'Part 5: Autonomous Systems' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.17. Taxonomy of Agents": {
+    "message": "17. اے آئی ایجنٹس کی درجہ بندی",
+    "description": "The label for category '17. Taxonomy of Agents' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.18. Safety Patterns": {
+    "message": "18. حفاظتی نمونے (Safety Patterns)",
+    "description": "The label for category '18. Safety Patterns' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.19. Secure Communication": {
+    "message": "19. محفوظ مواصلات",
+    "description": "The label for category '19. Secure Communication' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.20. Decommissioning & Patching": {
+    "message": "20. خاتمہ اور پیچنگ (Patching)",
+    "description": "The label for category '20. Decommissioning & Patching' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Part 6: Governance": {
+    "message": "حصہ 6: حکمرانی اور نظم و ضبط",
+    "description": "The label for category 'Part 6: Governance' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.21. Organizational Models": {
+    "message": "21. تنظیمی ماڈل",
+    "description": "The label for category '21. Organizational Models' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.22. Legal & Regulatory": {
+    "message": "22. قانونی اور ریگولیٹری پہلو",
+    "description": "The label for category '22. Legal & Regulatory' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.23. Audits & Certifications": {
+    "message": "23. آڈٹ اور سرٹیفیکیشن",
+    "description": "The label for category '23. Audits & Certifications' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Part 7: Transformation": {
+    "message": "حصہ 7: تبدیلی کا عمل (Transformation)",
+    "description": "The label for category 'Part 7: Transformation' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.24. Change Management": {
+    "message": "24. تبدیلی کا انتظام (Change Management)",
+    "description": "The label for category '24. Change Management' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.25. Deployment Roadmaps": {
+    "message": "25. نفاذ کا روڈ میپ",
+    "description": "The label for category '25. Deployment Roadmaps' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.26. Education & Capacity": {
+    "message": "26. تعلیم اور صلاحیت سازی",
+    "description": "The label for category '26. Education & Capacity' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Part 8: Case Studies": {
+    "message": "حصہ 8: عملی مطالعہ (Case Studies)",
+    "description": "The label for category 'Part 8: Case Studies' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.27. Hospital Case Study": {
+    "message": "27. ہسپتال کا عملی مطالعہ",
+    "description": "The label for category '27. Hospital Case Study' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.28. University Case Study": {
+    "message": "28. یونیورسٹی کا عملی مطالعہ",
+    "description": "The label for category '28. University Case Study' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.29. City Case Study": {
+    "message": "29. شہر کے انتظام کا عملی مطالعہ",
+    "description": "The label for category '29. City Case Study' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.30. Failures & Analysis": {
+    "message": "30. ناکامیاں اور تجزیہ",
+    "description": "The label for category '30. Failures & Analysis' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Part 9: Appendices": {
+    "message": "حصہ 9: ضمیمے (Appendices)",
+    "description": "The label for category 'Part 9: Appendices' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.31. Logic Patterns": {
+    "message": "31. منطقی نمونے",
+    "description": "The label for category '31. Logic Patterns' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.32. Checklists & Templates": {
+    "message": "32. چیک لسٹ اور ٹیمپلیٹس",
+    "description": "The label for category '32. Checklists & Templates' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.33. Glossary & References": {
+    "message": "33. فرہنگ اور حوالہ جات",
+    "description": "The label for category '33. Glossary & References' in sidebar 'tutorialSidebar'"
+  }
+}
